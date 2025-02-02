@@ -1,0 +1,31 @@
+{
+  "name": "admin-client",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@mdi/js": "^7.4.47",
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@pinia/nuxt": "^0.9.0",
+    "chart.js": "^4.4.7",
+    "detect-browser": "^5.3.0",
+    "nuxt": "^3.15.0",
+    "pinia": "^2.3.0",
+    "vue": "latest",
+    "vue-chartjs": "^5.3.2",
+    "vue-router": "latest",
+    "vue-toastification": "^2.0.0-rc.5",
+    "vue3-datepicker": "^0.4.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "prettier-plugin-vue": "^1.1.6"
+  }
+}

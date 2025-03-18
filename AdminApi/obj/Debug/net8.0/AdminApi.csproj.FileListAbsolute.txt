@@ -853,3 +853,4 @@ F:\CodeCanyon\AdminVUE\Project-Nuxt3\AdminApi\obj\Debug\net8.0\AdminApi.xml
 F:\CodeCanyon\AdminVUE\Project-Nuxt3\AdminApi\obj\Debug\net8.0\AdminApi.pdb
 F:\CodeCanyon\AdminVUE\Project-Nuxt3\AdminApi\obj\Debug\net8.0\AdminApi.genruntimeconfig.cache
 F:\CodeCanyon\AdminVUE\Project-Nuxt3\AdminApi\obj\Debug\net8.0\ref\AdminApi.dll
+F:\CodeCanyon\AdminVUE\Project-Nuxt3\AdminApi\obj\Debug\net8.0\AdminApi.sourcelink.json

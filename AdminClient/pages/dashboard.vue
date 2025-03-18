@@ -2,7 +2,7 @@
   <div class="space-y-24 px-4 py-6">
     <div class="grid grid-cols-1 md:grid-cols-4 md:gap-x-2">
       <div
-        class="flex min-h-28 flex-col justify-center space-y-2 rounded-md bg-gray-900 pl-4 text-white"
+        class="bg-semi-black flex min-h-28 flex-col justify-center space-y-2 rounded-md pl-4 text-white"
       >
         <Icon icon-name="mdiGithub" size="26" color="#ffffff" />
         <div class="flex">
@@ -11,7 +11,7 @@
         </div>
       </div>
       <div
-        class="flex min-h-28 flex-col justify-center space-y-2 rounded-md bg-gray-800 pl-4 text-white"
+        class="bg-semi-black flex min-h-28 flex-col justify-center space-y-2 rounded-md pl-4 text-white"
       >
         <Icon icon-name="mdiGithub" size="26" color="#ffffff" />
         <div class="flex">
@@ -20,7 +20,7 @@
         </div>
       </div>
       <div
-        class="flex min-h-28 flex-col justify-center space-y-2 rounded-md bg-gray-700 pl-4 text-white"
+        class="bg-semi-black flex min-h-28 flex-col justify-center space-y-2 rounded-md pl-4 text-white"
       >
         <Icon icon-name="mdiGithub" size="26" color="#ffffff" />
         <div class="flex">
@@ -29,7 +29,7 @@
         </div>
       </div>
       <div
-        class="flex min-h-28 flex-col justify-center space-y-2 rounded-md bg-gray-600 pl-4 text-white"
+        class="bg-semi-black flex min-h-28 flex-col justify-center space-y-2 rounded-md pl-4 text-white"
       >
         <Icon icon-name="mdiGithub" size="26" color="#ffffff" />
         <div class="flex">

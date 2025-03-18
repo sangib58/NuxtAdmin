@@ -107,16 +107,16 @@
       <div class="bg-dark-gray py-2 text-center text-white">
         <div class="space-y-6">
           <div class="flex justify-center space-x-6">
-            <a :href="settings.footerInstagram" target="_blank"
+            <a :href="settings?.footerInstagram" target="_blank"
               ><Icon icon-name="mdiInstagram" size="26" color="#ffffff"
             /></a>
-            <a :href="settings.footerLinkedin" target="_blank"
+            <a :href="settings?.footerLinkedin" target="_blank"
               ><Icon icon-name="mdiLinkedin" size="26" color="#ffffff"
             /></a>
-            <a :href="settings.footerFacebook" target="_blank"
+            <a :href="settings?.footerFacebook" target="_blank"
               ><Icon icon-name="mdiFacebook" size="26" color="#ffffff"
             /></a>
-            <a :href="settings.footerTwitter" target="_blank"
+            <a :href="settings?.footerTwitter" target="_blank"
               ><Icon icon-name="mdiTwitter" size="26" color="#ffffff"
             /></a>
           </div>

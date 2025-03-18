@@ -1,11 +1,11 @@
 <template>
   <div @click="closePopUps">
     <nav
-      class="fixed left-0 top-0 z-20 min-h-full w-64 bg-gray-900"
-      :class="{ hidden: hideSidebar }"
+      class="sidebar fixed left-0 top-0 z-50 min-h-full w-64 bg-dark-black"
+      :class="{ 'sidebar-hidden': hideSidebar }"
     >
       <div class="flex flex-col">
-        <div class="flex space-x-2 border-b border-b-gray-600 px-4 py-4">
+        <div class="flex space-x-2 border-b border-b-gray-800 px-4 py-4">
           <img :src="profileImg" class="size-12 rounded-full object-cover" />
           <div class="flex flex-col justify-center text-white">
             <span class="text-sm font-bold">{{ userInfo?.obj.fullName }}</span>
@@ -19,7 +19,7 @@
             <li v-for="(item, index) in menu" :key="index">
               <NuxtLink
                 :to="item.route"
-                class="parent flex items-center px-3 py-3.5 text-gray-300 hover:rounded-lg hover:bg-gray-950 hover:text-white"
+                class="parent flex items-center px-3 py-3.5 text-gray-300 hover:rounded-lg hover:bg-semi-black hover:text-white"
                 :class="{
                   'cursor-pointer': item.route == '',
                   'parent-active': index === expandedIndex,
@@ -68,8 +68,8 @@
     </nav>
     <div
       @click.stop="hideSidebar = true"
-      class="fixed z-30 ml-64 min-h-full w-[calc(100%-256px)] bg-black opacity-50 md:hidden"
-      :class="{ hidden: hideSidebar }"
+      class="overlay fixed z-30 ml-64 min-h-full w-[calc(100%-256px)] bg-black opacity-50 md:hidden"
+      :class="{ 'overlay-hidden': hideSidebar }"
     ></div>
     <main
       class="relative min-h-screen w-full"
@@ -119,7 +119,7 @@
           >
             <span><Icon icon-name="mdiBell" size="24" color="#3a484a" /></span>
             <span
-              class="absolute right-[242px] top-[1px] flex size-8 items-center justify-center rounded-full bg-gray-900 text-sm font-semibold text-white"
+              class="absolute right-[242px] top-[1px] flex size-8 items-center justify-center rounded-full bg-semi-black text-sm font-semibold text-white"
               >{{ notifications?.recordsTotal }}</span
             >
             <div
@@ -188,7 +188,7 @@
         @close="handleClose"
       />
     </main>
-    <footer class="right-0 flex justify-end text-sm">
+    <footer class="right-0 flex justify-end px-2 py-2 text-sm text-gray-700">
       {{ allSettings?.copyRightText }}
     </footer>
   </div>
@@ -276,3 +276,22 @@ const { data: menu } = useFetch(
   },
 );
 </script>
+
+<style scoped>
+.sidebar {
+  transition: transform 0.2s ease-in-out;
+}
+
+.sidebar-hidden {
+  transform: translateX(-100%);
+}
+
+.overlay {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.overlay-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+</style>

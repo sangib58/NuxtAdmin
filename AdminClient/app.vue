@@ -13,6 +13,7 @@
 const fullscreenElement = ref(null);
 const fullScreenStatus = ref(false);
 
+//toggle full screen
 const toggleFullScreen = async (isFullScreen) => {
   if (!isFullScreen) {
     await fullscreenElement.value.requestFullscreen();

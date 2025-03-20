@@ -38,6 +38,9 @@ import {
   mdiPlus,
   mdiPencil,
   mdiDelete,
+  mdiShieldCrown,
+  mdiAccountCheck,
+  mdiAccountCancel,
 } from "@mdi/js";
 const props = defineProps({
   iconName: {
@@ -107,6 +110,12 @@ const mdiIcon = computed(() => {
     return mdiPencil;
   } else if (props.iconName == "mdiDelete") {
     return mdiDelete;
+  } else if (props.iconName == "mdiShieldCrown") {
+    return mdiShieldCrown;
+  } else if (props.iconName == "mdiAccountCheck") {
+    return mdiAccountCheck;
+  } else if (props.iconName == "mdiAccountCancel") {
+    return mdiAccountCancel;
   }
 });
 </script>

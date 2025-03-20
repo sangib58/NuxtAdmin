@@ -9,7 +9,7 @@
           <img :src="profileImg" class="size-12 rounded-full object-cover" />
           <div class="flex flex-col justify-center text-white">
             <span class="text-sm font-bold">{{ userInfo?.obj.fullName }}</span>
-            <span class="text-xs font-semibold">{{
+            <span class="text-xs font-medium text-blue-600">{{
               userInfo?.obj.roleName
             }}</span>
           </div>
@@ -46,8 +46,11 @@
                 </span>
               </NuxtLink>
               <ul
-                v-if="item.childItems.length > 0 && index === expandedIndex"
-                class="space-y-3"
+                v-if="item.childItems.length > 0"
+                :class="{
+                  'child-menu': true,
+                  'child-menu-expanded': index === expandedIndex,
+                }"
               >
                 <li
                   v-for="(child, cIndex) in item.childItems"
@@ -68,17 +71,18 @@
     </nav>
     <div
       @click.stop="hideSidebar = true"
-      class="overlay fixed z-30 ml-64 min-h-full w-[calc(100%-256px)] bg-black opacity-50 md:hidden"
+      class="overlay fixed z-40 ml-64 min-h-full w-[calc(100%-256px)] bg-black opacity-50 md:hidden"
       :class="{ 'overlay-hidden': hideSidebar }"
     ></div>
     <main
       class="relative min-h-screen w-full"
       :class="{
         'md:ml-64 md:w-[calc(100%-256px)]': hideSidebar == false,
+        'full-screen': props.isFullScreen,
       }"
     >
       <header
-        class="sticky top-0 z-40 flex items-center justify-between bg-light-gray px-2 py-2 shadow-2xl"
+        class="sticky top-0 z-30 flex items-center justify-between bg-light-gray px-2 py-2 shadow-2xl"
       >
         <span
           @click.stop="sidebarToggle"
@@ -123,13 +127,17 @@
               >{{ notifications?.recordsTotal }}</span
             >
             <div
-              v-if="notifications?.recordsTotal > 0 && showNotification"
-              class="absolute right-0 top-10 max-h-64 space-y-1 overflow-y-scroll rounded-md bg-white px-2 py-2 shadow-2xl shadow-black/70"
+              :class="{
+                'child-menu-notification': true,
+                'child-menu-expanded-notification':
+                  notifications?.recordsTotal > 0 && showNotification,
+              }"
+              class="absolute right-0 top-10 max-h-64 space-y-1 overflow-y-scroll rounded-md bg-white shadow-2xl shadow-black/70"
             >
               <div
-                v-for="(item, index) in notifications.data"
+                v-for="(item, index) in notifications?.data"
                 :key="index"
-                class="text-lg font-medium text-gray-700 odd:bg-white even:bg-slate-50"
+                class="p-2 text-lg font-medium text-gray-700 odd:bg-white even:bg-light-gray"
               >
                 LogIn Time: {{ item.logInTime }} IP: {{ item.ip }} Browser:
                 {{ item.browser }} Platform: {{ item.platform }}
@@ -154,8 +162,11 @@
               </div>
             </button>
             <div
-              v-if="showPersonalize"
-              class="right-18 absolute top-10 flex w-[120px] flex-col space-y-2 rounded-md bg-white pb-[2px] text-sm font-semibold shadow-md shadow-black/20"
+              :class="{
+                'child-menu': true,
+                'child-menu-expanded': showPersonalize,
+              }"
+              class="right-18 absolute top-10 flex w-[120px] flex-col space-y-2 rounded-md bg-white text-sm font-semibold shadow-md shadow-black/20"
             >
               <NuxtLink
                 to="/user/change-password"
@@ -293,5 +304,30 @@ const { data: menu } = useFetch(
 .overlay-hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+.child-menu-notification {
+  transition: max-height 0.3s ease-in-out;
+  max-height: 0;
+}
+
+.child-menu-expanded-notification {
+  max-height: 300px;
+}
+
+.child-menu {
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  max-height: 0;
+}
+
+.child-menu-expanded {
+  max-height: 100px;
+}
+
+.full-screen {
+  height: 100vh;
+  overflow: auto;
+  background-color: white;
 }
 </style>

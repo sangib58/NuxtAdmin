@@ -3,7 +3,7 @@
     <!--General Settings Form-->
     <div
       @click.stop="toggleGeneralForm"
-      class="flex cursor-pointer items-center justify-between rounded-md border border-gray-300 py-3 hover:bg-gray-100"
+      class="flex cursor-pointer items-center justify-between rounded-md border border-gray-300 py-3 hover:bg-light-gray"
     >
       <span class="pl-2 text-base font-semibold">General Settings</span>
       <span class="pr-2">
@@ -16,8 +16,18 @@
         <Icon icon-name="mdiArrowDown" size="20" color="#3a484a" v-else />
       </span>
     </div>
-    <div class="px-4 py-4" :class="{ hidden: isGeneralSettingsVisible }">
-      <form @submit.prevent="saveGeneralSettings" class="space-y-4">
+    <div
+      :class="{
+        'child-collapse': true,
+        'child-expanded': !isGeneralSettingsVisible,
+        'px-4 py-4': !isGeneralSettingsVisible,
+      }"
+    >
+      <form
+        @submit.prevent="saveGeneralSettings"
+        class="space-y-4"
+        :class="{ hidden: isGeneralSettingsVisible }"
+      >
         <div class="grid grid-cols-1 md:grid-cols-3 md:gap-x-4 md:gap-y-4">
           <div>
             <label
@@ -150,7 +160,7 @@
           <button
             :disabled="checkGeneralformValid"
             type="submit"
-            class="mt-4 w-24 rounded-md bg-gray-800 py-1.5 text-sm font-bold text-white disabled:bg-gray-300"
+            class="mt-4 w-20 rounded-md bg-dark-gray py-2 text-sm font-bold text-white disabled:bg-gray-300"
           >
             Update
           </button>
@@ -160,7 +170,7 @@
     <!--Email Settings Form-->
     <div
       @click.stop="toggleEmailForm"
-      class="mt-2 flex cursor-pointer items-center justify-between rounded-md border border-gray-300 py-3 hover:bg-gray-100"
+      class="mt-2 flex cursor-pointer items-center justify-between rounded-md border border-gray-300 py-3 hover:bg-light-gray"
     >
       <span class="pl-2 text-base font-semibold">Email Settings</span>
       <span class="pr-2">
@@ -173,8 +183,18 @@
         <Icon icon-name="mdiArrowDown" size="20" color="#3a484a" v-else />
       </span>
     </div>
-    <div class="px-4 py-4" :class="{ hidden: isEmailSettingsVisible }">
-      <form @submit.prevent="saveEmailSettings" class="space-y-4">
+    <div
+      :class="{
+        'child-collapse': true,
+        'child-expanded': !isEmailSettingsVisible,
+        'px-4 py-4': !isEmailSettingsVisible,
+      }"
+    >
+      <form
+        @submit.prevent="saveEmailSettings"
+        :class="{ hidden: isEmailSettingsVisible }"
+        class="space-y-4"
+      >
         <div class="grid grid-cols-1 md:grid-cols-4 md:gap-x-4 md:gap-y-4">
           <div>
             <label class="block text-sm font-medium text-gray-700">Email</label>
@@ -220,7 +240,7 @@
         <div>
           <button
             type="submit"
-            class="mt-4 w-24 rounded-md bg-gray-800 py-1.5 text-sm font-bold text-white disabled:bg-gray-300"
+            class="mt-4 w-20 rounded-md bg-dark-gray py-2 text-sm font-bold text-white disabled:bg-gray-300"
           >
             Update
           </button>
@@ -232,7 +252,7 @@
 
     <div
       @click.stop="toggleEmailTextForm"
-      class="mt-2 flex cursor-pointer items-center justify-between rounded-md border border-gray-300 py-3 hover:bg-gray-100"
+      class="mt-2 flex cursor-pointer items-center justify-between rounded-md border border-gray-300 py-3 hover:bg-light-gray"
     >
       <span class="pl-2 text-base font-semibold">Email Text Settings</span>
       <span class="pr-2">
@@ -245,8 +265,18 @@
         <Icon icon-name="mdiArrowDown" size="20" color="#3a484a" v-else />
       </span>
     </div>
-    <div class="px-4 py-4" :class="{ hidden: isEmailTextSettingsVisible }">
-      <form @submit.prevent="saveEmailTextSettings" class="space-y-4">
+    <div
+      :class="{
+        'child-collapse': true,
+        'child-expanded': !isEmailTextSettingsVisible,
+        'px-4 py-4': !isEmailTextSettingsVisible,
+      }"
+    >
+      <form
+        @submit.prevent="saveEmailTextSettings"
+        class="space-y-4"
+        :class="{ hidden: isEmailTextSettingsVisible }"
+      >
         <div class="text-base font-semibold">Welcome Email</div>
         <div class="grid grid-cols-1 md:grid-cols-3 md:gap-x-4 md:gap-y-4">
           <div>
@@ -318,7 +348,7 @@
         <div>
           <button
             type="submit"
-            class="mt-4 w-24 rounded-md bg-gray-800 py-1.5 text-sm font-bold text-white disabled:bg-gray-300"
+            class="mt-4 w-20 rounded-md bg-dark-gray py-2 text-sm font-bold text-white disabled:bg-gray-300"
           >
             Update
           </button>
@@ -329,7 +359,7 @@
     <!--Landing Page Form-->
     <div
       @click.stop="toggleLandingPage"
-      class="mt-2 flex cursor-pointer items-center justify-between rounded-md border border-gray-300 py-3 hover:bg-gray-100"
+      class="mt-2 flex cursor-pointer items-center justify-between rounded-md border border-gray-300 py-3 hover:bg-light-gray"
     >
       <span class="pl-2 text-base font-semibold">Landing Page</span>
       <span class="pr-2">
@@ -343,8 +373,18 @@
       </span>
     </div>
 
-    <div class="px-4 py-4" :class="{ hidden: isLandingTextSettingsVisible }">
-      <form @submit.prevent="saveLandingSettings" class="space-y-4">
+    <div
+      :class="{
+        'child-collapse': true,
+        'child-expanded': !isLandingTextSettingsVisible,
+        'px-4 py-4': !isLandingTextSettingsVisible,
+      }"
+    >
+      <form
+        @submit.prevent="saveLandingSettings"
+        class="space-y-4"
+        :class="{ hidden: isLandingTextSettingsVisible }"
+      >
         <div class="grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-x-4">
           <div>
             <label class="block text-sm font-medium text-gray-700"
@@ -747,7 +787,7 @@
         <div>
           <button
             type="submit"
-            class="mt-4 w-24 rounded-md bg-gray-800 py-1.5 text-sm font-bold text-white disabled:bg-gray-300"
+            class="mt-4 w-20 rounded-md bg-dark-gray py-2 text-sm font-bold text-white disabled:bg-gray-300"
           >
             Update
           </button>
@@ -1271,3 +1311,18 @@ const saveLandingSettings = async () => {
 //On mount life cycle hook
 onMounted(() => fetchSettings());
 </script>
+
+<style scoped>
+.child-collapse {
+  transition:
+    max-height 0.4s ease-out,
+    opacity 0.4s ease-out;
+  max-height: 0;
+  opacity: 0;
+}
+
+.child-expanded {
+  max-height: 500px;
+  opacity: 1;
+}
+</style>

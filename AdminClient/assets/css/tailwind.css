@@ -3,7 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+html,
+body {
   scroll-behavior: smooth;
 }
 
@@ -27,11 +28,11 @@ body {
 }
 
 .parent.router-link-exact-active {
-  @apply bg-semi-black rounded-lg text-white;
+  @apply rounded-lg bg-semi-black text-white;
 }
 
 .parent-active {
-  @apply bg-semi-black rounded-lg text-white;
+  @apply rounded-lg bg-semi-black text-white;
 }
 
 .child.router-link-exact-active {
@@ -49,7 +50,6 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  /* background: #a3a3c2; */
   background: #cecece;
 }
 

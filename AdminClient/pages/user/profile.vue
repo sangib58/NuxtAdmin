@@ -77,7 +77,7 @@
           <button
             :disabled="checkformValid"
             type="Update"
-            class="mt-4 w-24 rounded-md bg-gray-800 py-1.5 text-sm font-bold text-white disabled:bg-gray-300"
+            class="mt-4 w-20 rounded-md bg-dark-gray py-2 text-sm font-bold text-white disabled:bg-gray-300"
           >
             Update
           </button>

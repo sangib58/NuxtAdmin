@@ -3,7 +3,7 @@
     <div class="flex justify-end">
       <button
         @click.stop="openAdd"
-        class="mb-1 rounded bg-blue-500 px-3 py-1 text-sm text-white hover:bg-blue-600 disabled:bg-gray-300"
+        class="mb-1 rounded bg-dark-gray px-3 py-1.5 text-sm text-white hover:bg-dark-black disabled:bg-gray-300"
       >
         Add Role
       </button>

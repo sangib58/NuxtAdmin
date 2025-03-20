@@ -186,14 +186,14 @@
             <button
               type="submit"
               :disabled="checkSignInFormValid"
-              class="rounded-3xl bg-gray-900 py-1 font-semibold text-white outline outline-1 disabled:bg-gray-300"
+              class="rounded-3xl bg-dark-gray py-1 font-semibold text-white outline outline-1 disabled:bg-gray-300"
             >
               Sign In
             </button>
             <button
               @click.stop="registerToggle"
               type="button"
-              class="rounded-3xl bg-gray-400 py-1 font-semibold text-gray-800"
+              class="bg-deep-gray rounded-3xl py-1 font-semibold text-gray-800"
             >
               Register
             </button>

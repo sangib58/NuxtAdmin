@@ -3,7 +3,7 @@
     <div
       class="fixed inset-0 z-50 flex min-h-dvh items-center justify-center bg-black bg-opacity-50"
     >
-      <div class="flex min-w-64 flex-col rounded-md bg-gray-900 px-4 py-2">
+      <div class="flex min-w-64 flex-col rounded-md bg-dark-black px-4 py-2">
         <div class="text-xl font-bold text-white">Want to leave?</div>
         <div class="pt-2 text-sm text-gray-200">Press Signout to leave</div>
         <div

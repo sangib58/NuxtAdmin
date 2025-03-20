@@ -247,7 +247,7 @@
                 <button
                   :disabled="checkformValid"
                   type="submit"
-                  class="w-full rounded-3xl bg-gray-800 py-2 text-lg font-semibold text-white disabled:bg-gray-300"
+                  class="w-full rounded-3xl bg-dark-gray py-2 text-lg font-semibold text-white disabled:bg-gray-300"
                 >
                   Submit
                 </button>

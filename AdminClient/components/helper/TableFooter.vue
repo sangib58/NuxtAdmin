@@ -1,7 +1,7 @@
 <template>
   <div class="mt-4 flex items-center justify-center space-x-4">
     <button
-      class="rounded bg-blue-500 px-3 py-1 text-sm text-white hover:bg-blue-600 disabled:bg-gray-300"
+      class="rounded bg-dark-gray px-3 py-1 text-sm text-white hover:bg-dark-black disabled:bg-gray-300"
       :disabled="currentPage === 1"
       @click="goToPage(currentPage - 1)"
     >
@@ -11,7 +11,7 @@
       Page {{ currentPage }} of {{ totalPages }}
     </span>
     <button
-      class="rounded bg-blue-500 px-3 py-1 text-sm text-white hover:bg-blue-600 disabled:bg-gray-300"
+      class="rounded bg-dark-gray px-3 py-1 text-sm text-white hover:bg-dark-black disabled:bg-gray-300"
       :disabled="currentPage === totalPages"
       @click="goToPage(currentPage + 1)"
     >

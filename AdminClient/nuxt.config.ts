@@ -8,7 +8,7 @@ export default defineNuxtConfig({
       viewport: "width=device-width, initial-scale=1",
     },
   },
-  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt"],
+  modules: ["@nuxtjs/tailwindcss"],
   plugins: [
     "~/plugins/icon.js",
     "~/plugins/toastification.client.js",
